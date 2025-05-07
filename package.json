@@ -14,7 +14,7 @@
         "build": "turbo run build",
         "build-force": "pnpm clean && turbo run build --force",
         "dev": "turbo run dev --parallel",
-        "start": "run-script-os",
+        "start": "turbo run build && node packages/server/dist/index.js"
         "start:windows": "cd packages/server/bin && run start",
         "start:default": "cd packages/server/bin && ./run start",
         "start-worker": "run-script-os",
